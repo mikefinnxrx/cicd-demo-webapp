@@ -6,7 +6,7 @@ pipeline {
     }
     agent any
     tools {
-        maven 'mvn-3.5.2'
+        maven 'mvn-3.8.4'
     }
     stages {
         stage('Cloning Git') {
@@ -14,7 +14,7 @@ pipeline {
                 git([url: 'https://github.com/mikefinnxrx/cicd-demo-webapp.git', branch: 'master', credentialsId: 'mikefinnxrx-github'])
             }
         }
-        
+
         stage('Building app') {
             steps {
                 sh 'mvn package'
