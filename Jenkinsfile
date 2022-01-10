@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        imagename = "xeroxcom/nagios-sentry:latest"
+        imagename = "xeroxcom/nagios-sentry"
         registryCredential = 'mikefinnx-dockerhub'
         dockerImage = ''
     }
